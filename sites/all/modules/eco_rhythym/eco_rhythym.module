@@ -1,0 +1,65 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+function eco_rhythym_menu() {
+   $items['json/creatures'] = array(
+    'title' => 'Creatures List',
+    'page callback' => 'eco_rhythym_creatures_json',
+    'access arguments' => array('access content'),
+    'page arguments' => array(2),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function eco_rhythym_form_alter(&$form, &$form_state, $form_id) {
+  if ($form_id == 'plot_node_form') {
+      drupal_add_js(drupal_get_path('module', 'eco_rhythym') .'/js/form_alter.js', 'file');
+               $options = array (
+  0 => t('-- select --')
+);
+      $result = db_select('node', 'n')
+    ->fields('n')
+    ->condition('type', 'creature','=')
+    ->execute();
+   
+     while($record = $result->fetchAssoc()) {
+        $options[$record['nid']] =  $record['title'];
+    }   
+    
+    // Add the check box
+   $form['field_plot_creature']['und']['#options'] = $options;
+   $form['path']['#type'] = 'hidden';
+  
+//return $options;
+}
+}
+
+function eco_rhythym_creatures_json($tid) {
+    $tidWild = '%' . $tid . '%';
+      $options['data'] = array (
+  0 => t('-- select --')
+);
+      $query = db_select('field_data_field_creture_nickname', 'f');
+      $query->join('node', 'n', 'n.nid = f.entity_id');
+      $query->join('field_data_field_creature_group', 'g', 'n.nid = g.entity_id');
+      $query->join('taxonomy_term_data', 't', 'g.field_creature_group_tid = t.tid');
+      $resultFields = $query
+    ->fields('n', array('nid','title'))
+    ->fields('f', array('field_creture_nickname_value'))
+    ->fields('t', array('name','tid'));
+      $result = $resultFields
+    ->condition('n.type', 'creature','=')
+    ->condition('t.name', $tidWild,'LIKE')
+    ->execute();
+   
+     while($record = $result->fetchAssoc()) {
+        $options['data'][$record['nid']] =  $record['title'] . "(" . $record['field_creture_nickname_value'] . ") - " . $tid;
+    }   
+    
+    return drupal_json_output($options);
+    exit ();
+}

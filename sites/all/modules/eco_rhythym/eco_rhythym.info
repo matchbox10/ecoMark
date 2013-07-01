@@ -1,0 +1,5 @@
+name = Eco Rhythym Tools
+description = Collection of bespoke functions to enable increased relationships between taxonomies and contentent types
+package = Eco Rhythym
+core = 7.x
+version = 0.1

@@ -1,0 +1,160 @@
+/* This file will hold styles for the mobile version of your website (mobile first). */
+/* This also can include ANY global CSS that applies site-wide. Unless overwritten by a more specific style rule, CSS declarations in global.css will apply site-wide. */
+
+
+body {
+	/*background-color:#222;
+	background: url("../images/slide-image-3.jpg") no-repeat fixed center top / cover transparent;*/
+    min-height: 100%;
+    min-width: 100%;
+	color: #fff;
+}
+body  a {color:#ff4400;}
+
+
+
+
+
+
+#section-header{
+	background-color: #fff;padding: 7px 0 10px;
+	/*background: -moz-linear-gradient(center top , #464646, #000000) repeat scroll 0 0 transparent;*/
+    box-shadow: 1px 1px 2px #000000;
+    min-height: 58px;
+
+}
+
+/* ### responsive menu ### */
+#zone-branding-wrapper {
+    /*
+    fix for ie z-index problem, add this on the top container that holds your menu block
+    */
+    /*position:relative;
+    z-index:2*/
+}
+#block-menu-menu-accordion {
+    margin-bottom:1em;
+}
+#block-menu-menu-accordion ul.menu {
+    margin:0 0 5px 0;
+    padding:0;
+    list-style:none;
+    position:relative
+}
+#block-menu-menu-accordion ul.menu li a {
+    display: block;
+    line-height: 1em;
+    padding: 0.5em;
+    outline:none;
+    background:#333;
+    color:#FFF;
+    border:1px solid #666;
+}
+#block-menu-menu-accordion ul.menu li a:hover {
+    background:#000;
+    text-decoration:none
+}
+#block-menu-menu-accordion ul.menu li span.over {
+    background:#CCC;
+    color: #000000;
+    display: block;
+    float: right;
+    height: 33px;
+    line-height: 30px;
+    padding: 0 0.5em;
+    text-align: center;
+    cursor:pointer
+}
+#block-menu-menu-accordion ul.menu li span.over:hover {
+    background:#F90;
+    color:#FFF
+}
+#block-menu-menu-accordion ul.menu ul {
+    margin:0;
+    padding:0;
+    display:none;
+	border: green 1px solid;
+}
+#block-menu-menu-accordion ul.menu ul li a {
+    text-indent:0;
+    color:#000;
+    background:#CCC;
+    text-decoration:none;
+}
+#block-menu-menu-accordion ul.menu ul li a:hover {
+    background: #EBEBEB
+}
+#block-menu-menu-accordion ul.menu ul li a.last {
+    border-bottom: none;
+}
+
+/* ends */
+
+#secondary-menu {display:none;}
+
+
+#breadcrumb{/*background-color:#999;-moz-border-radius:12px;border-radius:12px; box-shadow: 1px 1px 2px #000000;*/}
+
+.zone-content { 
+margin-top: 15px;
+margin-bottom: 20px;
+padding-bottom: 20px;
+/*opacity:0.8;*/
+-moz-border-radius:12px;
+border-radius:12px;
+box-shadow: 1px 1px 2px #000000;
+background: url("../images/content_bg.png");
+}
+
+
+li.pager-previous {width:60px;}
+h1 #page-title .title {padding-bottom:0;}
+#block-block-3.block .block-block .block-3 .block-block-3 .odd{ background-color:#ff4400;}
+
+*#main-menu  li {line-height:40px;background-color:#ff9900;padding:7px 12px;-moz-border-radius:5px;border-radius:5px;}
+#main-menu  li a{color:#fff;text-decoration:none;font-weight:bold;font-size:16px;}
+#main-menu  li.active{background-color:#fff;}
+#main-menu  li a.active{color:#ff4400;text-decoration:none;font-weight:bold;font-size:16px;}*/
+
+/*#block-menu-menu-accordion ul.menu { margin-bottom: 3px;}
+#block-menu-menu-accordion ul.menu  li {line-height:20px;background-color:#ff9900;padding:7px 12px;-moz-border-radius:5px;border-radius:5px;list-style:none; margin-top:2px;}
+#block-menu-menu-accordion ul.menu  li a {color:#fff;text-decoration:none;font-weight:bold;font-size:16px;}
+#block-menu-menu-accordion ul.menu  li.active{background-color:#fff;}
+#block-menu-menu-accordion ul.menu  li a.active{color:#ff4400;text-decoration:none;font-weight:bold;font-size:16px;}*/
+
+#secondary-menu {display:none;}
+
+
+#breadcrumb{/*background-color:#999;-moz-border-radius:12px;border-radius:12px; box-shadow: 1px 1px 2px #000000;*/}
+
+.zone-content { 
+margin-top: 15px;
+margin-bottom: 20px;
+padding-bottom: 20px;
+/*opacity:0.8;*/
+-moz-border-radius:12px;
+border-radius:12px;
+box-shadow: 1px 1px 2px #000000;
+background: url("../images/content_bg.png");
+}
+
+
+#views-exposed-form-tracking-page{
+	/* border: 1px solid red;
+    float: left;
+    margin-left: 174px;
+    margin-top: -79px;
+    width: 700px;}
+	*/
+#gmap-auto1map-gmap0{/*clear:left;*/}
+
+#plot-node-form  .text-format-wrapper{/*float:;*/}
+
+/*.grid-4 {float:right;}*/
+li.pager-previous {width:60px;}
+h1 #page-title .title {padding-bottom:0;}
+#block-block-3.block .block-block .block-3 .block-block-3 .odd{ background-color:#ff4400;}
+/*.block .block-block .block-3 .block-block-3 .odd {background-color: red;}*/
+
+
+

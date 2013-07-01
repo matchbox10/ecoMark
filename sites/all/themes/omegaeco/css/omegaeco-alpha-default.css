@@ -1,0 +1,35 @@
+/* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+
+#block-menu-menu-accordion {
+    /*background: #333333;*/
+}
+#block-menu-menu-accordion ul.menu li {
+    min-width:150px;
+}
+#block-menu-menu-accordion li ul li {
+    width: 150px;
+}
+#block-menu-menu-accordion li {
+    float: left;
+    position: relative;
+}
+#block-menu-menu-accordion li ul {
+    left: 0px;
+    position: absolute !important;
+    z-index: 999;
+}
+
+#block-menu-menu-accordion ul.menu li a {
+    line-height: 1.2em;
+	font-size: 1.2em;
+	text-align: center;
+	font-weight: normal;
+ 
+}
+#block-menu-menu-accordion ul.menu li ul li a {
+    line-height: 1.1em;
+	font-size: 1.1em;
+	text-align: center;
+	font-weight: normal;
+ 
+}
